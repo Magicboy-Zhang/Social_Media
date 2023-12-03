@@ -1,0 +1,11 @@
+1、环境配置网址：复制graphviz的安装目录下的bin目录，然后粘贴到系统变量中的Path中
+2、配置环境完成后，cmd进入终端
+3、验证：dot -version
+4、输入：dot -Tpng InputFile.dot -o OutputFile.png
+InputFile.dot：为dot格式的文件目录+文件名
+OutputFile.png：OutputFile为最终转化的png格式的文件目录+文件名
+
+https://www.cnblogs.com/onemorepoint/p/8310996.html
+————————————————
+版权声明：本文为CSDN博主「三少的笔记」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_40893448/article/details/108943760

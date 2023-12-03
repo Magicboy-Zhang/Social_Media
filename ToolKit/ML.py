@@ -43,6 +43,9 @@ def plot_decision_boundary2F2D(X_train, X_test, y_train, y_test, clf, show, titl
     '''
     作图
     '''
+    fig = plt.figure(figsize = (8, 8))
+    ax = fig.add_subplot(111)
+
     if show == 'train':
         # 绘制数据点
         sns.scatterplot(x = X_train.iloc[:, 0].values, y = X_train.iloc[:, 1].values, hue = y_train.iloc[:, 0].values, 
@@ -53,13 +56,15 @@ def plot_decision_boundary2F2D(X_train, X_test, y_train, y_test, clf, show, titl
 
     # 绘制决策边界
     # 使用 contourf 函数绘制决策边界，通过填充等高线图的方式呈现分类区域。
-    plt.contourf(xx, yy, Z, alpha = 0.2, cmap = 'coolwarm')
+    
+
+    ax.contourf(xx, yy, Z, alpha = 0.2, cmap = 'coolwarm')
 
     # 设置标题和轴标签
-    plt.title(title)
-    plt.legend(title = 'label', loc = 'lower right')
-    plt.xlabel(X_train.columns.tolist()[0])
-    plt.ylabel(X_train.columns.tolist()[1])
+    ax.set_title(title)
+    ax.legend(title = 'label', loc = 'lower right')
+    ax.set_xlabel(X_train.columns.tolist()[0])
+    ax.set_ylabel(X_train.columns.tolist()[1])
 
     plt.show()
 
@@ -99,6 +104,10 @@ def plot_fitted_curve1F2D(X_train, X_test, y_train, y_test, reg, show, curve_nam
     '''
     绘制拟合函数曲线
     '''
+
+    fig = plt.figure(figsize = (12, 12))
+    ax = fig.add_subplot(111)
+
     if show == 'train':
         # 图中的点为训练集的数据点
         sns.scatterplot(x = X_train.iloc[:, 0].values, y = y_train.iloc[:, 0].values)
@@ -108,11 +117,12 @@ def plot_fitted_curve1F2D(X_train, X_test, y_train, y_test, reg, show, curve_nam
         sns.scatterplot(x = X_test.iloc[:, 0].values, y = y_test.iloc[:, 0].values)
 
     # 绘制模型拟合的函数曲线
-    plt.plot(xx, y_pred, label = curve_name, color = 'red', linewidth = 1)
+    ax.plot(xx, y_pred, label = curve_name, color = 'red', linewidth = 1)
 
     # 设置图形属性
-    plt.title(title)
-    plt.legend(loc = 'lower right')
+    ax.title(title)
+    ax.legend(loc = 'lower right')
+
     plt.show()
 
 '''
