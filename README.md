@@ -14,6 +14,7 @@ Works are only being published on Xiaohongshu (a social media platform) currentl
 - <b>机器学习算法 Machine Learning Algo：</b>
     - K近邻 KNN
     - 支持向量机 SVM
+    - 线性回归 & Ridge & Lasso Linear Regression
 
 - <b>工具箱 ToolKit （包含了一些封装好的函数）：</b>
     - plot_decision_boundary2F2D  生成仅通过两个特征进行分类的分类器的决策边界图像
