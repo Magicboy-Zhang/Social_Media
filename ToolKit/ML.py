@@ -93,7 +93,7 @@ def plot_fitted_curve1F2D(X_train, X_test, y_train, y_test, reg, show, curve_nam
     计算所有X的预测值
     '''
     # 得到x的范围
-    x_min, x_max = X_train.iloc[:, 0].min() - 0.2, X_train.iloc[:, 0].max() + 0.2
+    x_min, x_max = X_train.iloc[:, 0].min() - 0.8, X_train.iloc[:, 0].max() + 0.8
 
     # 生成覆盖该范围的x的数列
     xx = np.arange(x_min, x_max, 0.01)
@@ -120,7 +120,7 @@ def plot_fitted_curve1F2D(X_train, X_test, y_train, y_test, reg, show, curve_nam
     ax.plot(xx, y_pred, label = curve_name, color = 'red', linewidth = 1)
 
     # 设置图形属性
-    ax.title(title)
+    ax.set_title(title)
     ax.legend(loc = 'lower right')
 
     plt.show()
