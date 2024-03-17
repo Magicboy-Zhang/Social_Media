@@ -16,6 +16,12 @@ Works are only being published on Xiaohongshu (a social media platform) currentl
     - 支持向量机 SVM
     - 线性回归 & Ridge & Lasso Linear Regression
     - 决策树 Decision Tree
+    - 随机森林 Random Forest
+    - 特征工程 Feature Engineering
+ 
+- <b>库练习_Libraries_Practice：</b>
+    - Matplotlib库练习
+    - Seaborn库练习
 
 - <b>工具箱 ToolKit （包含了一些封装好的函数）：</b>
     - plot_decision_boundary2F2D  生成仅通过两个特征进行分类的分类器的决策边界图像
